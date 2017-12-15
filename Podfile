@@ -10,5 +10,7 @@ target 'vision-box-challenge' do
   pod 'SwiftyJSON'
   pod 'Realm'
   pod 'RealmSwift'
+  pod 'Swinject'
+  pod 'RxSwift'
 end
 

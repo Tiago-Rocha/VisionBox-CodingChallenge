@@ -18,6 +18,12 @@
 		473FA6EF1FE41AE9003C7CB8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6EE1FE41AE9003C7CB8 /* Place.swift */; };
 		479A11131FE43B4200EB9EB6 /* PlaceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A11121FE43B4200EB9EB6 /* PlaceRepository.swift */; };
 		479A11151FE43B8900EB9EB6 /* APIPlaceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A11141FE43B8900EB9EB6 /* APIPlaceProvider.swift */; };
+		479A111A1FE43CE900EB9EB6 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A11181FE43CE900EB9EB6 /* PlacesViewController.swift */; };
+		479A111B1FE43CE900EB9EB6 /* PlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479A11191FE43CE900EB9EB6 /* PlacesViewController.xib */; };
+		479A111F1FE43D0600EB9EB6 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A111E1FE43D0600EB9EB6 /* PlacesViewModel.swift */; };
+		479A11221FE43FE300EB9EB6 /* DependencyGraphProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A11211FE43FE300EB9EB6 /* DependencyGraphProtocol.swift */; };
+		479A11241FE4400400EB9EB6 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A11231FE4400400EB9EB6 /* DependencyInjection.swift */; };
+		479A11261FE4402800EB9EB6 /* DependencyGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479A11251FE4402800EB9EB6 /* DependencyGraph.swift */; };
 		8881D609D078C6E20FD1BC5C /* Pods_vision_box_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3809FBED18768B5B5CE306B6 /* Pods_vision_box_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +54,12 @@
 		473FA6EE1FE41AE9003C7CB8 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		479A11121FE43B4200EB9EB6 /* PlaceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRepository.swift; sourceTree = "<group>"; };
 		479A11141FE43B8900EB9EB6 /* APIPlaceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPlaceProvider.swift; sourceTree = "<group>"; };
+		479A11181FE43CE900EB9EB6 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		479A11191FE43CE900EB9EB6 /* PlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesViewController.xib; sourceTree = "<group>"; };
+		479A111E1FE43D0600EB9EB6 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		479A11211FE43FE300EB9EB6 /* DependencyGraphProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraphProtocol.swift; sourceTree = "<group>"; };
+		479A11231FE4400400EB9EB6 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		479A11251FE4402800EB9EB6 /* DependencyGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyGraph.swift; sourceTree = "<group>"; };
 		790C9247756C4F7E79236403 /* Pods-vision-box-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vision-box-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		D90EB59477B5AF9FD8CAE1B7 /* Pods-vision-box-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vision-box-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,8 +106,9 @@
 		473FA6C61FE3F83C003C7CB8 /* vision-box-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				479A11201FE43FC000EB9EB6 /* DependencyGraph */,
 				479A11101FE43A9D00EB9EB6 /* Repository */,
-				473FA6ED1FE41AD5003C7CB8 /* Views */,
+				473FA6ED1FE41AD5003C7CB8 /* Place */,
 				473FA6EC1FE41AD0003C7CB8 /* Models */,
 				473FA6E71FE3F871003C7CB8 /* API */,
 				473FA6C71FE3F83C003C7CB8 /* AppDelegate.swift */,
@@ -134,11 +147,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		473FA6ED1FE41AD5003C7CB8 /* Views */ = {
+		473FA6ED1FE41AD5003C7CB8 /* Place */ = {
 			isa = PBXGroup;
 			children = (
+				479A11171FE43CD400EB9EB6 /* PlaceList */,
+				479A11161FE43CC700EB9EB6 /* PlaceDetail */,
 			);
-			path = Views;
+			path = Place;
 			sourceTree = "<group>";
 		};
 		479A11101FE43A9D00EB9EB6 /* Repository */ = {
@@ -156,6 +171,49 @@
 				479A11141FE43B8900EB9EB6 /* APIPlaceProvider.swift */,
 			);
 			path = Place;
+			sourceTree = "<group>";
+		};
+		479A11161FE43CC700EB9EB6 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		479A11171FE43CD400EB9EB6 /* PlaceList */ = {
+			isa = PBXGroup;
+			children = (
+				479A111D1FE43CF800EB9EB6 /* ViewModel */,
+				479A111C1FE43CF000EB9EB6 /* View */,
+			);
+			path = PlaceList;
+			sourceTree = "<group>";
+		};
+		479A111C1FE43CF000EB9EB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				479A11181FE43CE900EB9EB6 /* PlacesViewController.swift */,
+				479A11191FE43CE900EB9EB6 /* PlacesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		479A111D1FE43CF800EB9EB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				479A111E1FE43D0600EB9EB6 /* PlacesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		479A11201FE43FC000EB9EB6 /* DependencyGraph */ = {
+			isa = PBXGroup;
+			children = (
+				479A11211FE43FE300EB9EB6 /* DependencyGraphProtocol.swift */,
+				479A11231FE4400400EB9EB6 /* DependencyInjection.swift */,
+				479A11251FE4402800EB9EB6 /* DependencyGraph.swift */,
+			);
+			path = DependencyGraph;
 			sourceTree = "<group>";
 		};
 		7CFC1F3EBD1BFA953D846C6A /* Pods */ = {
@@ -261,6 +319,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479A111B1FE43CE900EB9EB6 /* PlacesViewController.xib in Resources */,
 				473FA6D21FE3F83C003C7CB8 /* LaunchScreen.storyboard in Resources */,
 				473FA6CF1FE3F83C003C7CB8 /* Assets.xcassets in Resources */,
 				473FA6CD1FE3F83C003C7CB8 /* Main.storyboard in Resources */,
@@ -325,14 +384,18 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,10 +412,15 @@
 				473FA6EB1FE40366003C7CB8 /* Router.swift in Sources */,
 				473FA6CA1FE3F83C003C7CB8 /* ViewController.swift in Sources */,
 				473FA6C81FE3F83C003C7CB8 /* AppDelegate.swift in Sources */,
+				479A111F1FE43D0600EB9EB6 /* PlacesViewModel.swift in Sources */,
 				479A11151FE43B8900EB9EB6 /* APIPlaceProvider.swift in Sources */,
+				479A111A1FE43CE900EB9EB6 /* PlacesViewController.swift in Sources */,
 				479A11131FE43B4200EB9EB6 /* PlaceRepository.swift in Sources */,
+				479A11221FE43FE300EB9EB6 /* DependencyGraphProtocol.swift in Sources */,
 				473FA6E91FE3FEB8003C7CB8 /* RequestHandler.swift in Sources */,
+				479A11261FE4402800EB9EB6 /* DependencyGraph.swift in Sources */,
 				473FA6EF1FE41AE9003C7CB8 /* Place.swift in Sources */,
+				479A11241FE4400400EB9EB6 /* DependencyInjection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

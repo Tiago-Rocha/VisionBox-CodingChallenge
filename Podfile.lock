@@ -15,7 +15,9 @@ PODS:
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
+  - RxSwift (4.0.0)
   - SwiftyJSON (4.0.0)
+  - Swinject (2.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -24,7 +26,9 @@ DEPENDENCIES:
   - GooglePlaces
   - Realm
   - RealmSwift
+  - RxSwift
   - SwiftyJSON
+  - Swinject
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -33,8 +37,10 @@ SPEC CHECKSUMS:
   GooglePlaces: dd70d9d71ea1c7944846afe67de3712c99b30a77
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Swinject: afea49fd95f392b41171669f165842879c48fad6
 
-PODFILE CHECKSUM: e1f6a62e2833d37a815c0834114b040653d33cbb
+PODFILE CHECKSUM: 579bb40d2a76b895f972680548b65c1b1c9cb3ae
 
 COCOAPODS: 1.3.1
