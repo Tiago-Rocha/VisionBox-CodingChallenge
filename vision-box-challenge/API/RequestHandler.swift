@@ -34,17 +34,16 @@ struct RequestHandler {
                 case .failure(_):
                     success = false
                     if let data = response.data {
-                        let responseJSON = JSON(data: data)
+                        let responseJSON = try! JSON(data: data)
                         let message = responseJSON["message"].stringValue
                         if !message.isEmpty {
                             responseData["error"] = message as AnyObject?
                         }
                     } else {
-                        responseData["error"] = "General Error" as AnyObject
+                        responseData["error"] = "General Error" as AnyObject?
                     }
                     completionHandler(success, responseData)
                 }
         }
     }
 }
-

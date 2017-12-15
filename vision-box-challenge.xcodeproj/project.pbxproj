@@ -15,6 +15,7 @@
 		473FA6DD1FE3F83C003C7CB8 /* vision_box_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6DC1FE3F83C003C7CB8 /* vision_box_challengeTests.swift */; };
 		473FA6E91FE3FEB8003C7CB8 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6E81FE3FEB8003C7CB8 /* RequestHandler.swift */; };
 		473FA6EB1FE40366003C7CB8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6EA1FE40366003C7CB8 /* Router.swift */; };
+		473FA6EF1FE41AE9003C7CB8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6EE1FE41AE9003C7CB8 /* Place.swift */; };
 		8881D609D078C6E20FD1BC5C /* Pods_vision_box_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3809FBED18768B5B5CE306B6 /* Pods_vision_box_challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		473FA6DE1FE3F83C003C7CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473FA6E81FE3FEB8003C7CB8 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		473FA6EA1FE40366003C7CB8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		473FA6EE1FE41AE9003C7CB8 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		790C9247756C4F7E79236403 /* Pods-vision-box-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vision-box-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		D90EB59477B5AF9FD8CAE1B7 /* Pods-vision-box-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vision-box-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,8 @@
 		473FA6C61FE3F83C003C7CB8 /* vision-box-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				473FA6ED1FE41AD5003C7CB8 /* Views */,
+				473FA6EC1FE41AD0003C7CB8 /* Models */,
 				473FA6E71FE3F871003C7CB8 /* API */,
 				473FA6C71FE3F83C003C7CB8 /* AppDelegate.swift */,
 				473FA6C91FE3F83C003C7CB8 /* ViewController.swift */,
@@ -115,6 +119,21 @@
 				473FA6EA1FE40366003C7CB8 /* Router.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		473FA6EC1FE41AD0003C7CB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				473FA6EE1FE41AE9003C7CB8 /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		473FA6ED1FE41AD5003C7CB8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7CFC1F3EBD1BFA953D846C6A /* Pods */ = {
@@ -309,6 +328,7 @@
 				473FA6CA1FE3F83C003C7CB8 /* ViewController.swift in Sources */,
 				473FA6C81FE3F83C003C7CB8 /* AppDelegate.swift in Sources */,
 				473FA6E91FE3FEB8003C7CB8 /* RequestHandler.swift in Sources */,
+				473FA6EF1FE41AE9003C7CB8 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
