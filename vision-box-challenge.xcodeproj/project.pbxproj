@@ -1,0 +1,449 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		473FA6C81FE3F83C003C7CB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6C71FE3F83C003C7CB8 /* AppDelegate.swift */; };
+		473FA6CA1FE3F83C003C7CB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6C91FE3F83C003C7CB8 /* ViewController.swift */; };
+		473FA6CD1FE3F83C003C7CB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473FA6CB1FE3F83C003C7CB8 /* Main.storyboard */; };
+		473FA6CF1FE3F83C003C7CB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473FA6CE1FE3F83C003C7CB8 /* Assets.xcassets */; };
+		473FA6D21FE3F83C003C7CB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473FA6D01FE3F83C003C7CB8 /* LaunchScreen.storyboard */; };
+		473FA6DD1FE3F83C003C7CB8 /* vision_box_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6DC1FE3F83C003C7CB8 /* vision_box_challengeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		473FA6D91FE3F83C003C7CB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 473FA6BC1FE3F83C003C7CB8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 473FA6C31FE3F83C003C7CB8;
+			remoteInfo = "vision-box-challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		473FA6C41FE3F83C003C7CB8 /* vision-box-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vision-box-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		473FA6C71FE3F83C003C7CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		473FA6C91FE3F83C003C7CB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		473FA6CC1FE3F83C003C7CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		473FA6CE1FE3F83C003C7CB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		473FA6D11FE3F83C003C7CB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		473FA6D31FE3F83C003C7CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473FA6D81FE3F83C003C7CB8 /* vision-box-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vision-box-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		473FA6DC1FE3F83C003C7CB8 /* vision_box_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vision_box_challengeTests.swift; sourceTree = "<group>"; };
+		473FA6DE1FE3F83C003C7CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		473FA6C11FE3F83C003C7CB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473FA6D51FE3F83C003C7CB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		473FA6BB1FE3F83C003C7CB8 = {
+			isa = PBXGroup;
+			children = (
+				473FA6C61FE3F83C003C7CB8 /* vision-box-challenge */,
+				473FA6DB1FE3F83C003C7CB8 /* vision-box-challengeTests */,
+				473FA6C51FE3F83C003C7CB8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		473FA6C51FE3F83C003C7CB8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				473FA6C41FE3F83C003C7CB8 /* vision-box-challenge.app */,
+				473FA6D81FE3F83C003C7CB8 /* vision-box-challengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		473FA6C61FE3F83C003C7CB8 /* vision-box-challenge */ = {
+			isa = PBXGroup;
+			children = (
+				473FA6C71FE3F83C003C7CB8 /* AppDelegate.swift */,
+				473FA6C91FE3F83C003C7CB8 /* ViewController.swift */,
+				473FA6CB1FE3F83C003C7CB8 /* Main.storyboard */,
+				473FA6CE1FE3F83C003C7CB8 /* Assets.xcassets */,
+				473FA6D01FE3F83C003C7CB8 /* LaunchScreen.storyboard */,
+				473FA6D31FE3F83C003C7CB8 /* Info.plist */,
+			);
+			path = "vision-box-challenge";
+			sourceTree = "<group>";
+		};
+		473FA6DB1FE3F83C003C7CB8 /* vision-box-challengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				473FA6DC1FE3F83C003C7CB8 /* vision_box_challengeTests.swift */,
+				473FA6DE1FE3F83C003C7CB8 /* Info.plist */,
+			);
+			path = "vision-box-challengeTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		473FA6C31FE3F83C003C7CB8 /* vision-box-challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 473FA6E11FE3F83C003C7CB8 /* Build configuration list for PBXNativeTarget "vision-box-challenge" */;
+			buildPhases = (
+				473FA6C01FE3F83C003C7CB8 /* Sources */,
+				473FA6C11FE3F83C003C7CB8 /* Frameworks */,
+				473FA6C21FE3F83C003C7CB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vision-box-challenge";
+			productName = "vision-box-challenge";
+			productReference = 473FA6C41FE3F83C003C7CB8 /* vision-box-challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		473FA6D71FE3F83C003C7CB8 /* vision-box-challengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 473FA6E41FE3F83C003C7CB8 /* Build configuration list for PBXNativeTarget "vision-box-challengeTests" */;
+			buildPhases = (
+				473FA6D41FE3F83C003C7CB8 /* Sources */,
+				473FA6D51FE3F83C003C7CB8 /* Frameworks */,
+				473FA6D61FE3F83C003C7CB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				473FA6DA1FE3F83C003C7CB8 /* PBXTargetDependency */,
+			);
+			name = "vision-box-challengeTests";
+			productName = "vision-box-challengeTests";
+			productReference = 473FA6D81FE3F83C003C7CB8 /* vision-box-challengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		473FA6BC1FE3F83C003C7CB8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = tiagorocha;
+				TargetAttributes = {
+					473FA6C31FE3F83C003C7CB8 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					473FA6D71FE3F83C003C7CB8 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 473FA6C31FE3F83C003C7CB8;
+					};
+				};
+			};
+			buildConfigurationList = 473FA6BF1FE3F83C003C7CB8 /* Build configuration list for PBXProject "vision-box-challenge" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 473FA6BB1FE3F83C003C7CB8;
+			productRefGroup = 473FA6C51FE3F83C003C7CB8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				473FA6C31FE3F83C003C7CB8 /* vision-box-challenge */,
+				473FA6D71FE3F83C003C7CB8 /* vision-box-challengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		473FA6C21FE3F83C003C7CB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473FA6D21FE3F83C003C7CB8 /* LaunchScreen.storyboard in Resources */,
+				473FA6CF1FE3F83C003C7CB8 /* Assets.xcassets in Resources */,
+				473FA6CD1FE3F83C003C7CB8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473FA6D61FE3F83C003C7CB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		473FA6C01FE3F83C003C7CB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473FA6CA1FE3F83C003C7CB8 /* ViewController.swift in Sources */,
+				473FA6C81FE3F83C003C7CB8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		473FA6D41FE3F83C003C7CB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				473FA6DD1FE3F83C003C7CB8 /* vision_box_challengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		473FA6DA1FE3F83C003C7CB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 473FA6C31FE3F83C003C7CB8 /* vision-box-challenge */;
+			targetProxy = 473FA6D91FE3F83C003C7CB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		473FA6CB1FE3F83C003C7CB8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				473FA6CC1FE3F83C003C7CB8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		473FA6D01FE3F83C003C7CB8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				473FA6D11FE3F83C003C7CB8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		473FA6DF1FE3F83C003C7CB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		473FA6E01FE3F83C003C7CB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		473FA6E21FE3F83C003C7CB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPL6N62Q58;
+				INFOPLIST_FILE = "vision-box-challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagorocha.vision-box-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		473FA6E31FE3F83C003C7CB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPL6N62Q58;
+				INFOPLIST_FILE = "vision-box-challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagorocha.vision-box-challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		473FA6E51FE3F83C003C7CB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPL6N62Q58;
+				INFOPLIST_FILE = "vision-box-challengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagorocha.vision-box-challengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vision-box-challenge.app/vision-box-challenge";
+			};
+			name = Debug;
+		};
+		473FA6E61FE3F83C003C7CB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WPL6N62Q58;
+				INFOPLIST_FILE = "vision-box-challengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagorocha.vision-box-challengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/vision-box-challenge.app/vision-box-challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		473FA6BF1FE3F83C003C7CB8 /* Build configuration list for PBXProject "vision-box-challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473FA6DF1FE3F83C003C7CB8 /* Debug */,
+				473FA6E01FE3F83C003C7CB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		473FA6E11FE3F83C003C7CB8 /* Build configuration list for PBXNativeTarget "vision-box-challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473FA6E21FE3F83C003C7CB8 /* Debug */,
+				473FA6E31FE3F83C003C7CB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		473FA6E41FE3F83C003C7CB8 /* Build configuration list for PBXNativeTarget "vision-box-challengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				473FA6E51FE3F83C003C7CB8 /* Debug */,
+				473FA6E61FE3F83C003C7CB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 473FA6BC1FE3F83C003C7CB8 /* Project object */;
+}
