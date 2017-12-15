@@ -1,0 +1,6 @@
+framework module Pods_vision_box_challenge {
+  umbrella header "Pods-vision-box-challenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

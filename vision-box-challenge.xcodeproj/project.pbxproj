@@ -13,6 +13,9 @@
 		473FA6CF1FE3F83C003C7CB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473FA6CE1FE3F83C003C7CB8 /* Assets.xcassets */; };
 		473FA6D21FE3F83C003C7CB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473FA6D01FE3F83C003C7CB8 /* LaunchScreen.storyboard */; };
 		473FA6DD1FE3F83C003C7CB8 /* vision_box_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6DC1FE3F83C003C7CB8 /* vision_box_challengeTests.swift */; };
+		473FA6E91FE3FEB8003C7CB8 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6E81FE3FEB8003C7CB8 /* RequestHandler.swift */; };
+		473FA6EB1FE40366003C7CB8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473FA6EA1FE40366003C7CB8 /* Router.swift */; };
+		8881D609D078C6E20FD1BC5C /* Pods_vision_box_challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3809FBED18768B5B5CE306B6 /* Pods_vision_box_challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3809FBED18768B5B5CE306B6 /* Pods_vision_box_challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vision_box_challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473FA6C41FE3F83C003C7CB8 /* vision-box-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vision-box-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473FA6C71FE3F83C003C7CB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		473FA6C91FE3F83C003C7CB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		473FA6D81FE3F83C003C7CB8 /* vision-box-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "vision-box-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		473FA6DC1FE3F83C003C7CB8 /* vision_box_challengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vision_box_challengeTests.swift; sourceTree = "<group>"; };
 		473FA6DE1FE3F83C003C7CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473FA6E81FE3FEB8003C7CB8 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		473FA6EA1FE40366003C7CB8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		790C9247756C4F7E79236403 /* Pods-vision-box-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vision-box-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		D90EB59477B5AF9FD8CAE1B7 /* Pods-vision-box-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-vision-box-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8881D609D078C6E20FD1BC5C /* Pods_vision_box_challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,8 @@
 				473FA6C61FE3F83C003C7CB8 /* vision-box-challenge */,
 				473FA6DB1FE3F83C003C7CB8 /* vision-box-challengeTests */,
 				473FA6C51FE3F83C003C7CB8 /* Products */,
+				7CFC1F3EBD1BFA953D846C6A /* Pods */,
+				7FAD7DA39E9C735BABAD366D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +111,27 @@
 		473FA6E71FE3F871003C7CB8 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				473FA6E81FE3FEB8003C7CB8 /* RequestHandler.swift */,
+				473FA6EA1FE40366003C7CB8 /* Router.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		7CFC1F3EBD1BFA953D846C6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				790C9247756C4F7E79236403 /* Pods-vision-box-challenge.debug.xcconfig */,
+				D90EB59477B5AF9FD8CAE1B7 /* Pods-vision-box-challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7FAD7DA39E9C735BABAD366D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3809FBED18768B5B5CE306B6 /* Pods_vision_box_challenge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 473FA6E11FE3F83C003C7CB8 /* Build configuration list for PBXNativeTarget "vision-box-challenge" */;
 			buildPhases = (
+				CCA0DFE8DC6FB4E3D92DA657 /* [CP] Check Pods Manifest.lock */,
 				473FA6C01FE3F83C003C7CB8 /* Sources */,
 				473FA6C11FE3F83C003C7CB8 /* Frameworks */,
 				473FA6C21FE3F83C003C7CB8 /* Resources */,
+				DDB9DA91AA88127E7D3B931D /* [CP] Embed Pods Frameworks */,
+				6CE958A40B4E61979FE7FA22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,13 +235,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CE958A40B4E61979FE7FA22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCA0DFE8DC6FB4E3D92DA657 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-vision-box-challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDB9DA91AA88127E7D3B931D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		473FA6C01FE3F83C003C7CB8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473FA6EB1FE40366003C7CB8 /* Router.swift in Sources */,
 				473FA6CA1FE3F83C003C7CB8 /* ViewController.swift in Sources */,
 				473FA6C81FE3F83C003C7CB8 /* AppDelegate.swift in Sources */,
+				473FA6E91FE3FEB8003C7CB8 /* RequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +459,7 @@
 		};
 		473FA6E21FE3F83C003C7CB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790C9247756C4F7E79236403 /* Pods-vision-box-challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +475,7 @@
 		};
 		473FA6E31FE3F83C003C7CB8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D90EB59477B5AF9FD8CAE1B7 /* Pods-vision-box-challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
