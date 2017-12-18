@@ -31,9 +31,10 @@ struct Router {
         }
     }
     func asURLRequest() throws -> URLRequest {
-        let url = URL(string: baseURLString)!
-        var urlRequest = URLRequest(url: url.appendingPathComponent(self.getRelativePath()))
-        print("URL Request: \(urlRequest)")
+        print(self.getRelativePath())
+        let url = URL(string: baseURLString + self.getRelativePath())!
+        var urlRequest = URLRequest(url: url)
+        print("URL Request: \(String(describing: urlRequest.url))")
         return try! Alamofire.JSONEncoding.default.encode(urlRequest)
     }
 }

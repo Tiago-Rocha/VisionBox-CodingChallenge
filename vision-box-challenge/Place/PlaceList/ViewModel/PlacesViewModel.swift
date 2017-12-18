@@ -9,17 +9,18 @@ class PlacesViewModel {
     var loadingSubject = PublishSubject<String>()
     init(repository: PlaceRepository) {
         self.repository = repository
+        setupBindings()
     }
 }
 extension PlacesViewModel {
     var numberOfRows: Int {
+        print(places.count)
         return places.count
     }
     func getCellViewModel(index: Int) -> PlacesCellViewModel? {
         return PlacesCellViewModel(place: places[index])
     }
     func getPlaces(input: String) {
-        print("getPlaces")
         repository.fetchPlaces(input: input)
     }
 }
@@ -28,8 +29,10 @@ extension PlacesViewModel {
         repository
             .places
             .asObservable()
-            .subscribe(onNext: {
-            _ in self.updateSubject.onNext(true)})
+            .subscribe(onNext: { _ in
+                print("new places")
+                self.places = self.repository.places.value
+                self.updateSubject.onNext(true)})
             .disposed(by: disposeBag)
         
         repository

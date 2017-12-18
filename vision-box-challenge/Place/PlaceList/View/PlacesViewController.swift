@@ -5,6 +5,7 @@ class PlacesViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var placesTableView: UITableView!
     fileprivate var viewModel: PlacesViewModel
+    private var searchTimer: Timer?
     var disposeBag = DisposeBag()
     init(viewModel: PlacesViewModel) {
         self.viewModel = viewModel
@@ -19,15 +20,20 @@ class PlacesViewController: UIViewController {
         setupLayout()
         setupBindings()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 }
 extension PlacesViewController {
     func setupLayout() {
-        searchBar.delegate = self
         placesTableView.delegate = self
+        placesTableView.dataSource = self
+        placesTableView.register(UINib(nibName: "PlacesCell", bundle: nil), forCellReuseIdentifier: "placesCell")
+        placesTableView.estimatedRowHeight = 50
+        placesTableView.rowHeight = UITableViewAutomaticDimension
+        placesTableView.tableFooterView = UIView()
+        searchBar.delegate = self
     }
     func setupBindings() {
         viewModel
@@ -36,7 +42,15 @@ extension PlacesViewController {
             .subscribe(onNext: { title in
                 LoadingView.show(withTitle: title, style: .indicatorOnly)
             })
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
+        viewModel
+            .updateSubject
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {_ in
+                LoadingView.dismiss()
+                self.placesTableView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
 }
 extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -56,13 +70,19 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 extension PlacesViewController: UISearchBarDelegate {
-    @objc func fetchPlaces(input: String) {
-        viewModel.getPlaces(input: input)
+    @objc func fetchPlaces(timer: Timer) {
+        guard let searchText = timer.userInfo as? String else {
+            return
+        }
+        print("feteechhh")
+        viewModel.getPlaces(input: searchText.replacingOccurrences(of: " ", with: "&"))
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(self.fetchPlaces(input:)), object: nil)
-        self.perform(#selector(self.fetchPlaces(input:)), with: searchText, afterDelay: 0.5)
+        if let searchTimer = searchTimer {
+            searchTimer.invalidate()
+        }
+        searchTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.fetchPlaces(timer:)), userInfo: searchText, repeats: false)
     }
 }
+
 

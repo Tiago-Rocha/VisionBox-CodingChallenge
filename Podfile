@@ -12,5 +12,5 @@ target 'vision-box-challenge' do
   pod 'RealmSwift'
   pod 'Swinject'
   pod 'RxSwift'
+  pod 'KVNProgress', git: 'git@github.com:mobilejohnw/KVNProgress.git', branch: 'master', submodules: true
 end
-

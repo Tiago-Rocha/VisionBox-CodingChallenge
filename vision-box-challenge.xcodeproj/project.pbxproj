@@ -125,6 +125,13 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		473B46371FE7FBE2007EAE81 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		473FA6BB1FE3F83C003C7CB8 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +155,7 @@
 		473FA6C61FE3F83C003C7CB8 /* vision-box-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				473B46371FE7FBE2007EAE81 /* Extensions */,
 				473B46341FE7E76D007EAE81 /* UI */,
 				479A11201FE43FC000EB9EB6 /* DependencyGraph */,
 				479A11101FE43A9D00EB9EB6 /* Repository */,
@@ -427,6 +435,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-vision-box-challenge/Pods-vision-box-challenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KVNProgress/KVNProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -436,6 +445,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KVNProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
