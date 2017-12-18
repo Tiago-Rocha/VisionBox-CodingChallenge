@@ -1,10 +1,3 @@
-//
-//  Router.swift
-//  vision-box-challenge
-//
-//  Created by Tiago Rocha on 15/12/2017.
-//  Copyright © 2017 tiagorocha. All rights reserved.
-//
 import Foundation
 import Alamofire
 import RealmSwift
@@ -19,7 +12,6 @@ struct Router {
     fileprivate let apiKey = "AIzaSyA0LOB6rBpupBzbBJBoaPalH_uO_g6gHMc"
     let postRouterType: Route
     let params: [String:AnyObject]?
-    
     fileprivate func getRelativePath() -> String  {
         switch self.postRouterType {
             
@@ -27,11 +19,10 @@ struct Router {
             return "autocomplete/json?key=\(apiKey)" + "&input=\(params?["input"] as? String ?? "")"
             
         case .placeDetails:
-            return "details/json?key=\(apiKey)" + "&placeid=\(params?["placeID"] as? String ?? "")"
+            return "details/json?placeid=\(params?["placeID"] as? String ?? "")" + "&key=\(apiKey)"
         }
     }
     func asURLRequest() throws -> URLRequest {
-        print(self.getRelativePath())
         let url = URL(string: baseURLString + self.getRelativePath())!
         var urlRequest = URLRequest(url: url)
         print("URL Request: \(String(describing: urlRequest.url))")

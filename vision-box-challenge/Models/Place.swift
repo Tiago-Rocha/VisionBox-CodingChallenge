@@ -10,7 +10,8 @@ class Place {
     var address: String?
     var phone: String?
     var photos: [URL] = []
-    
+    var lat: Float?
+    var long: Float?
     var phoneUrl: URL? {
         if let phone = phone {
             if let phoneUrlString = "telprompt://\(phone)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {

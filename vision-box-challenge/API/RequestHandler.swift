@@ -1,11 +1,3 @@
-//
-//  RequestHandler.swift
-//  vision-box-challenge
-//
-//  Created by Tiago Rocha on 15/12/2017.
-//  Copyright © 2017 tiagorocha. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import SwiftyJSON
@@ -33,6 +25,8 @@ struct RequestHandler {
                     completionHandler(success, responseData)
                 case .failure(_):
                     success = false
+                    //TODO: Implement Server Error Messages
+                    // UNKNOWN_ERROR, ZERO_RESULTS, OVER_QUERY_LIMIT, REQUEST_DENIED, INVALID_REQUEST, NOT_FOUND
                     if let data = response.data {
                         let responseJSON = try! JSON(data: data)
                         let message = responseJSON["message"].stringValue

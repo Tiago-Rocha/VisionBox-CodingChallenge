@@ -30,7 +30,7 @@ extension PlacesViewController {
         placesTableView.delegate = self
         placesTableView.dataSource = self
         placesTableView.register(UINib(nibName: "PlacesCell", bundle: nil), forCellReuseIdentifier: "placesCell")
-        placesTableView.estimatedRowHeight = 50
+        placesTableView.estimatedRowHeight = 100
         placesTableView.rowHeight = UITableViewAutomaticDimension
         placesTableView.tableFooterView = UIView()
         searchBar.delegate = self
@@ -51,6 +51,14 @@ extension PlacesViewController {
                 self.placesTableView.reloadData()
             })
             .disposed(by: disposeBag)
+        viewModel
+        .showPlaceDetailSubject
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: {_ in
+            LoadingView.dismiss()
+            self.showPlaceDetail()
+        })
+        .disposed(by: disposeBag)
     }
 }
 extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,10 +71,8 @@ extension PlacesViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.layoutIfNeeded()
         return cell!
     }
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        viewModel.getPlaceDetail(index: indexPath.row)
     }
 }
 extension PlacesViewController: UISearchBarDelegate {
@@ -74,14 +80,26 @@ extension PlacesViewController: UISearchBarDelegate {
         guard let searchText = timer.userInfo as? String else {
             return
         }
-        print("feteechhh")
         viewModel.getPlaces(input: searchText.replacingOccurrences(of: " ", with: "&"))
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            viewModel.places = []
+            placesTableView.reloadData()
+            return
+        }
         if let searchTimer = searchTimer {
             searchTimer.invalidate()
         }
         searchTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.fetchPlaces(timer:)), userInfo: searchText, repeats: false)
+    }
+}
+extension PlacesViewController {
+    func showPlaceDetail() {
+        guard let _place = viewModel.selectedPlace else { return}
+        let vm = PlaceDetailViewModel(place: _place)
+        let vc = PlaceDetailViewController(viewModel: vm)
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
