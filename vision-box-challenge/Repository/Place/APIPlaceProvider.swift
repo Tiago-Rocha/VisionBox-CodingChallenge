@@ -2,7 +2,7 @@ import Foundation
 import SwiftyJSON
 
 struct APIPlaceProvider {
-    func getCities(input: String, completionHandler: (([Place]?) -> ())?) {
+    func getPlaces(input: String, completionHandler: (([Place]?) -> ())?) {
         RequestHandler(data: ["input": input as AnyObject], route: .placeDetails).doRequest { success, dataReceived in
             guard success else {
                 guard let error = dataReceived["error"] as? String

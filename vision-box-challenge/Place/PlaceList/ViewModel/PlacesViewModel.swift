@@ -1,47 +1,46 @@
-//
-//  PlacesViewModel.swift
-//  vision-box-challenge
-//
-//  Created by Tiago Rocha on 15/12/2017.
-//  Copyright © 2017 tiagorocha. All rights reserved.
-//
-
 import Foundation
+import RxSwift
 
 class PlacesViewModel {
-    init() {}
+    var places = [Place]()
+    var repository: PlaceRepository
+    let disposeBag = DisposeBag()
+    var updateSubject = PublishSubject<Bool>()
+    var loadingSubject = PublishSubject<String>()
+    init(repository: PlaceRepository) {
+        self.repository = repository
+    }
 }
-//import RxSwift
-//
-//class PlacesViewModel {
-//    var loadingSubject = PublishSubject<String?>()
-//    var successSubject = PublishSubject<String?>()
-//    var errorSubject = PublishSubject<String?>()
-////    var adsRepository: AdsRepository
-//    init(/*repository: AdsRepository*/) {
-////        self.adsRepository = repository
-////        self.adsRepository.addDelegate(self)
-//    }
-//    deinit {
-//        self.adsRepository.removeDelegate(self)
-//    }
-//}
-//extension AdsViewModel: AdsRepositoryDelegate {
-//    func changesOccured() {}
-//    func startedUpdating(_ title: String) {
-//        loadingSubject.onNext(title)
-//    }
-//    func errorSignal(_ error: String) {
-//        errorSubject.onNext(error)
-//    }
-//    func successSignal(_ success: String) {
-//        successSubject.onNext(success)
-//    }
-//    func deleteSignal() {}
-//}
-//extension AdsViewModel {
-//    func getCities() {
-//        adsRepository.getCities()
-//    }
-//}
+extension PlacesViewModel {
+    var numberOfRows: Int {
+        return places.count
+    }
+    func getCellViewModel(index: Int) -> PlacesCellViewModel? {
+        return PlacesCellViewModel(place: places[index])
+    }
+    func getPlaces(input: String) {
+        print("getPlaces")
+        repository.fetchPlaces(input: input)
+    }
+}
+extension PlacesViewModel {
+    func setupBindings() {
+        repository
+            .places
+            .asObservable()
+            .subscribe(onNext: {
+            _ in self.updateSubject.onNext(true)})
+            .disposed(by: disposeBag)
+        
+        repository
+            .loadingSignal
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {
+                title in
+                self.loadingSubject.onNext(title)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+}
 
