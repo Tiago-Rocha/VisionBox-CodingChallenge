@@ -1,6 +1,5 @@
 import Foundation
 import Swinject
-import RealmSwift
 
 struct DependencyGraph: DependencyGraphProtocol {
     fileprivate let dependencies: Resolver

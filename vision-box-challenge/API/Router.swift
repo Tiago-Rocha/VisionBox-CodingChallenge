@@ -1,6 +1,5 @@
 import Foundation
 import Alamofire
-import RealmSwift
 
 enum Route {
     case places
