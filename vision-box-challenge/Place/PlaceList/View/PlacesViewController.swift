@@ -20,7 +20,9 @@ class PlacesViewController: UIViewController {
         setupLayout()
         setupBindings()
     }
-    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -99,6 +101,7 @@ extension PlacesViewController {
         guard let _place = viewModel.selectedPlace else { return}
         let vm = PlaceDetailViewModel(place: _place)
         let vc = PlaceDetailViewController(viewModel: vm)
+        vc.hidesBottomBarWhenPushed = true
         self.present(vc, animated: true, completion: nil)
     }
 }

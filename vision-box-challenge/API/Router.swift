@@ -9,6 +9,7 @@ struct Router {
     // Google Places API Key - AIzaSyBd5yQ3S3hEzQTBPuVWvmQ9EXsQuxNJwHI
     fileprivate let baseURLString = "https://maps.googleapis.com/maps/api/place/"
     fileprivate let apiKey = "AIzaSyA0LOB6rBpupBzbBJBoaPalH_uO_g6gHMc"
+    //TODO: Use plist file to store API Key
     let postRouterType: Route
     let params: [String:AnyObject]?
     fileprivate func getRelativePath() -> String  {

@@ -19,6 +19,9 @@ class PlaceDetailViewController: UIViewController {
         super.viewDidLoad()
         setupLayout()
     }
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
 
     @IBAction func dismissViewController(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

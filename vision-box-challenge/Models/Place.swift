@@ -12,14 +12,7 @@ class Place {
     var photos: [URL] = []
     var lat: Float?
     var long: Float?
-    var phoneUrl: URL? {
-        if let phone = phone {
-            if let phoneUrlString = "telprompt://\(phone)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-                return URL(string: phoneUrlString)
-            }
-        }
-        return nil
-    }
+
     init(placeID: String, name: String) {
         self.ID = placeID
         self.name = name
